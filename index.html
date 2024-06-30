@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Quiz</title>
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+
+<body class=" bg-blue-100  h-screen flex flex-col items-center justify-center">
+    <div class="container text-center ">
+        <h1 class="text-5xl text-blue-400 font-bold m-10">Quick quiz</h1>
+
+        <button onclick="playGame()"
+            class="text-3xl bg-white text-blue-400 border-2 border-blue-400 p-3 px-16 m-12 hover:shadow-lg">Play</button>
+    </div>
+    <div class="header w-screen flex justify-around  m-10">
+        <div class="question hidden">
+            <div class=" qno text-xl">Question: 1/5</div>
+            <div class="bg-white w-48 h-8 border-blue-400 border-2">
+                <div class="progress w-1/5 bg-blue-400 h-full"></div>
+            </div>
+        </div>
+        <div class="clock hidden">
+            <div class="text-xl">Time</div>
+            <div class="time text-5xl text-blue-400 ">00:59</div>
+        </div>
+    </div>
+    <div class="main hidden">
+
+        <div class="heading text-4xl">What is the answer to this question?</div>
+        <div class="text-2xl">
+            <div class="choicebox flex bg-white m-2 hover:shadow-lg">
+                <p class="bg-blue-400 px-8 py-6">1</p>
+                <p class="text-center flex items-center">Choice 1</p>
+            </div>
+            <div class="choicebox flex bg-white m-2 hover:shadow-lg">
+                <p class="bg-blue-400 px-8 py-6">2</p>
+                <p class="text-center flex items-center ">Choice 2</p>
+            </div>
+            <div class="choicebox flex bg-white m-2 hover:shadow-lg">
+                <p class="bg-blue-400 px-8 py-6">3</p>
+                <p class="text-center flex items-center ">Choice 3</p>
+            </div>
+            <div class="choicebox flex bg-white m-2 hover:shadow-lg">
+                <p class="bg-blue-400 px-8 py-6">4</p>
+                <p class="text-center flex items-center ">Choice 4</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="end hidden">
+        <div class="text-center">
+            <p class="text-xl">Score</p>
+            <h1 class=" score text-9xl text-blue-400">0</h1>
+        </div>
+        <div class="flex flex-col">
+            <button onclick="goHome()" class="bg-white border-2 text-blue-400 border-blue-400 p-3 px-16 text-3xl m-4">Go
+                home</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+
+</html>
